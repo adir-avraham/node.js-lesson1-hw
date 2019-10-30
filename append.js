@@ -1,9 +1,8 @@
 const fs = require('fs');
 
 function writeToFile(path, data) {
-
     
-    fs.appendFile('info.text', "line 1\n", function (err) {
+    fs.appendFile(path, `${data}\n`, function (err) {
         if (err) {
             console.log("Error")
         }
